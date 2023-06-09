@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import * as locators from '../PageObjectModel/Locators.js';
+import * as locators from '../pageobject/locators.js';
 const firstName = faker.name.firstName()
 console.log()
 const lastName = faker.name.lastName()
@@ -39,7 +39,6 @@ describe("Creating Account for new User", () => {
       cy.get(locators.Alias).type("Vidnasinkatu isi aki")
       cy.get(locators.SubmitBtn).click()
       cy.get(locators.Assert).should('be.visible')
-     
       
 
 
